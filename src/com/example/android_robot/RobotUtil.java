@@ -11,15 +11,16 @@ public class RobotUtil {
 	/**
 	 * @param args
 	 */
-	public String InputStreamToString(InputStream is) throws IOException{
+	public String InputStreamToString(InputStream is) throws IOException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(is));
-	    StringBuffer buffer = new StringBuffer();
-	    String line = "";
-	    while ((line = in.readLine()) != null){
-	      buffer.append(line);
-	    }
-	    return buffer.toString();
+		StringBuffer buffer = new StringBuffer();
+		String line = "";
+		while ((line = in.readLine()) != null) {
+			buffer.append(line);
+		}
+		return buffer.toString();
 	}
+
 	public byte[] inputStreamExchangedString(InputStream is) {
 		byte data[] = new byte[1024];
 		int len;
@@ -41,5 +42,5 @@ public class RobotUtil {
 		}
 		return bos.toByteArray();
 	}
-    
+
 }
